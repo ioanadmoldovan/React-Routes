@@ -1,18 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { Link , NavLink, withRouter } from 'react-router-dom';
 
-const Navbar = () => {
-        return(
-            <nav className={"nav-wrapper blue darken-3"}>
-                <div className={"container"}>
-                    <a className={'brand-logo'}> React Routes </a>
-                    <ul className={"right"}>
-                        <li> <a href="/"> Home </a> </li>
-                        <li> <a href="/about"> About </a> </li>
-                        <li> <a href="/contact"> Contact </a></li>
-                    </ul>
-                </div>
-            </nav>
-        )
-    }
+const Navbar = (props) => {
 
-export default Navbar
+    //programmatic redirect
+    setTimeout( () => {
+        props.history.push('/about');
+    }, 2000 );
+        
+    return(
+        <nav className={"nav-wrapper blue darken-3"}>
+            <div className={"container"}>
+                <Link className={'brand-logo'}> React Routes </Link>
+                <ul className={"right"}>
+                    <li> <Link to="/"> Home </Link> </li>
+                    <li> <Link to="/about"> About </Link> </li>
+                    <li> <NavLink  to="/contact"> Contact </NavLink></li>
+                </ul>
+            </div>
+        </nav>
+    )
+}
+
+export default withRouter(Navbar);//supercharged component
