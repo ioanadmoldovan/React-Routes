@@ -4,7 +4,7 @@ import React from 'react';
 const Rainbow = ( WrappedComponent ) => {
     
     const colours = [ 'red', 'pink' ,'orange', 'blue', 'green', 'yellow' ];
-    const randomColour = colors[ Math.floor( Math.random() * 5 ) ];
+    const randomColour = colours[ Math.floor( Math.random() * 5 ) ];
 
     //adding a className for changing the text colour (with meterialize)
     const className = randomColour + '-text'; 

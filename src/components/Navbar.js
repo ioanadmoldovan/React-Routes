@@ -11,7 +11,7 @@ const Navbar = (props) => {
     return(
         <nav className={"nav-wrapper blue darken-3"}>
             <div className={"container"}>
-                <Link className={'brand-logo'}> React Routes </Link>
+                <div className={'brand-logo'}> React Routes </div>
                 <ul className={"right"}>
                     <li> <Link to="/"> Home </Link> </li>
                     <li> <Link to="/about"> About </Link> </li>
