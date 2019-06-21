@@ -11,3 +11,6 @@ const About = () => {
     }
 
 export default Rainbow(About);
+
+// About is super charged
+// About will have around it an extra div with the className of randomColours

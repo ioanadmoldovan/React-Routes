@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link , NavLink, withRouter } from 'react-router-dom';
 
-const Navbar = (props) => {
+const Navbar = ( props ) => {
 
-    //programmatic redirect
+    // programmatic redirect
+    // 'props' is an object that has a history property => add '/about' to it  
     setTimeout( () => {
         props.history.push('/about');
     }, 2000 );
-        
+    
     return(
         <nav className={"nav-wrapper blue darken-3"}>
             <div className={"container"}>
@@ -22,4 +23,4 @@ const Navbar = (props) => {
     )
 }
 
-export default withRouter(Navbar);//supercharged component
+export default withRouter(Navbar); // supercharged component, withRouter = hoc
